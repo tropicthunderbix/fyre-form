@@ -34,7 +34,7 @@ img {
 
 section {
   padding: 2.5rem 0;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .flex {
@@ -79,6 +79,10 @@ p {
     font-size: 1.7rem;
     margin-top: 0.5rem;
   }
+}
+
+.hidden {
+  display: none;
 }
 
 /*---------------------------------------------------- 
@@ -167,25 +171,35 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--white);
+        background-color: var(--light-gray);
         width: 5rem;
         height: 5rem;
         border-radius: 99999999px;
         filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
-        border: 5px solid var(--light-gray);
+        border: 5px solid var(--white);
+        transition: 0.5s;
         img {
           width: 3rem;
           height: 3rem;
         }
+      }
+
+      .active {
+        background-color: var(--yellow);
       }
     }
   }
 
   .form-data {
     margin-top: 4rem;
-    .form-1 {
+    position: relative;
+    .form-1,
+    .form-2,
+    .form-3 {
       gap: 2rem;
+      width: 100%;
     }
+
     label {
       color: var(--dark-gray);
       font-weight: 700;
@@ -199,7 +213,8 @@ main {
       width: 80%;
     }
 
-    input {
+    input,
+    textarea {
       background-color: var(--stone);
       border: 0;
       font-size: 1.3rem;
@@ -217,6 +232,12 @@ main {
     }
     input[type="text"]:focus {
       border: 3px solid var(--light-yellow);
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
 
     .vehicle-btn {
@@ -239,6 +260,33 @@ main {
           color: var(--white);
         }
       }
+    }
+
+    .note {
+      label {
+        text-align: start;
+      }
+    }
+
+    .form-3 {
+      label {
+        text-align: start;
+      }
+    }
+  }
+  .buttons {
+    margin-top: 2rem;
+    gap: 2rem;
+    justify-content: space-around;
+    button {
+      cursor: pointer;
+      background-color: var(--yellow);
+      padding: 0.5rem 1.5rem;
+      font-size: 1.5rem;
+      border: none;
+      color: var(--dark-gray);
+      border-radius: 10px;
+      font-weight: 600;
     }
   }
 }

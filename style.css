@@ -34,7 +34,6 @@ img {
 
 section {
   padding: 2.5rem 0;
-  overflow: hidden;
 }
 
 .flex {
@@ -78,6 +77,10 @@ p {
   font-weight: 600;
   font-size: 1.7rem;
   margin-top: 0.5rem;
+}
+
+.hidden {
+  display: none;
 }
 
 /*---------------------------------------------------- 
@@ -159,22 +162,30 @@ main .wrapper h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--white);
+  background-color: var(--light-gray);
   width: 5rem;
   height: 5rem;
   border-radius: 99999999px;
   filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.15));
-  border: 5px solid var(--light-gray);
+  border: 5px solid var(--white);
+  transition: 0.5s;
 }
 .quote .switch-state .items .item img {
   width: 3rem;
   height: 3rem;
 }
+.quote .switch-state .items .active {
+  background-color: var(--yellow);
+}
 .quote .form-data {
   margin-top: 4rem;
+  position: relative;
 }
-.quote .form-data .form-1 {
+.quote .form-data .form-1,
+.quote .form-data .form-2,
+.quote .form-data .form-3 {
   gap: 2rem;
+  width: 100%;
 }
 .quote .form-data label {
   color: var(--dark-gray);
@@ -187,7 +198,8 @@ main .wrapper h2 {
   gap: 0.5rem;
   width: 80%;
 }
-.quote .form-data input {
+.quote .form-data input,
+.quote .form-data textarea {
   background-color: var(--stone);
   border: 0;
   font-size: 1.3rem;
@@ -208,6 +220,11 @@ main .wrapper h2 {
 .quote .form-data input[type=text]:focus {
   border: 3px solid var(--light-yellow);
 }
+.quote .form-data input[type=number]::-webkit-inner-spin-button,
+.quote .form-data input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .quote .form-data .vehicle-btn {
   background-color: var(--yellow);
   font-size: 1.4rem;
@@ -227,4 +244,25 @@ main .wrapper h2 {
   background-color: var(--yellow);
   border-radius: 999999px;
   color: var(--white);
+}
+.quote .form-data .note label {
+  text-align: start;
+}
+.quote .form-data .form-3 label {
+  text-align: start;
+}
+.quote .buttons {
+  margin-top: 2rem;
+  gap: 2rem;
+  justify-content: space-around;
+}
+.quote .buttons button {
+  cursor: pointer;
+  background-color: var(--yellow);
+  padding: 0.5rem 1.5rem;
+  font-size: 1.5rem;
+  border: none;
+  color: var(--dark-gray);
+  border-radius: 10px;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */
