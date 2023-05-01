@@ -17,8 +17,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-
-    <!--  -->
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/x-icon"
@@ -203,7 +207,7 @@
 
           <div class="switch-state">
             <div class="items flex justify-center items-center">
-              <div class="item">
+              <div class="item active">
                 <img src="./images/car.png" alt="car" />
               </div>
               <div class="item">
@@ -215,54 +219,130 @@
             </div>
           </div>
 
-          <div class="form-data">
-            <form class="form-1 flex flex-col justify-center items-center">
-              <div class="filed">
-                <label for="make">MAKE</label>
-                <input id="make" type="text" placeholder="Eg:- A8, Accord..." />
-              </div>
-              <div class="filed">
-                <label for="model">MODEL</label>
-                <input
-                  id="make"
-                  type="text"
-                  placeholder="Eg:- Audi, Honda..."
-                />
-              </div>
-              <div class="filed">
-                <label for="does">DOES IT RUN AND DRIVE?</label>
-                <input
-                  id="does"
-                  type="text"
-                  placeholder="Eg: Yes, Accidented, No, needs a boost
-"
-                />
-              </div>
-              <div class="vehicle-btn flex justify-center items-center">
-                <h4>Add a vehicle</h4>
-
-                <div class="plus">
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    stroke-width="0"
-                    version="1.2"
-                    baseProfile="tiny"
-                    viewBox="0 0 24 24"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M18 10h-4v-4c0-1.104-.896-2-2-2s-2 .896-2 2l.071 4h-4.071c-1.104 0-2 .896-2 2s.896 2 2 2l4.071-.071-.071 4.071c0 1.104.896 2 2 2s2-.896 2-2v-4.071l4 .071c1.104 0 2-.896 2-2s-.896-2-2-2z"
-                    ></path>
-                  </svg>
+          <div class="form-data flex swiper formslider">
+            <div class="swiper-wrapper">
+              <!-- Form One -->
+              <form
+                class="form-1 swiper-slide flex flex-col justify-center items-center"
+              >
+                <div class="filed">
+                  <label for="make">MAKE</label>
+                  <input
+                    id="make"
+                    type="text"
+                    placeholder="Eg:- A8, Accord..."
+                  />
                 </div>
-              </div>
-            </form>
+                <div class="filed">
+                  <label for="model">MODEL</label>
+                  <input
+                    id="make"
+                    type="text"
+                    placeholder="Eg:- Audi, Honda..."
+                  />
+                </div>
+                <div class="filed">
+                  <label for="does">DOES IT RUN AND DRIVE?</label>
+                  <input
+                    id="does"
+                    type="text"
+                    placeholder="Eg: Yes, Accidented, No, needs a boost
+  "
+                  />
+                </div>
+                <div class="vehicle-btn flex justify-center items-center">
+                  <h4>Add a vehicle</h4>
+
+                  <div class="plus">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      version="1.2"
+                      baseProfile="tiny"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 10h-4v-4c0-1.104-.896-2-2-2s-2 .896-2 2l.071 4h-4.071c-1.104 0-2 .896-2 2s.896 2 2 2l4.071-.071-.071 4.071c0 1.104.896 2 2 2s2-.896 2-2v-4.071l4 .071c1.104 0 2-.896 2-2s-.896-2-2-2z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </form>
+              <!-- Form Two -->
+              <form
+                class="form-2 swiper-slide flex flex-col justify-center items-center"
+              >
+                <div class="filed">
+                  <label for="pickup-city">Pickup City</label>
+                  <input
+                    id="pickup-city"
+                    type="text"
+                    placeholder="Eg:- Toronto, Quebec...
+  "
+                  />
+                </div>
+                <div class="filed">
+                  <label for="delivery">Delivery City</label>
+                  <input
+                    id="delivery"
+                    type="text"
+                    placeholder="Eg:- Toronto, Quebec..."
+                  />
+                </div>
+                <div class="filed">
+                  <label for="pickup-data">Pickup Date</label>
+                  <input id="pickup-data" type="date" />
+                </div>
+
+                <div class="filed note">
+                  <label for="pickup-data">Note</label>
+                  <textarea id="pickup-data" rows="4" cols="50"></textarea>
+                </div>
+              </form>
+              <!-- Form Three -->
+              <form
+                class="form-3 swiper-slide flex flex-col justify-center items-center"
+              >
+                <div class="filed">
+                  <label for="firstname">First Name</label>
+                  <input id="firstname" type="text" />
+                </div>
+                <div class="filed">
+                  <label for="lastname">Last Name</label>
+                  <input id="lastname" type="text" />
+                </div>
+                <div class="filed">
+                  <label for="bussinessname">Business Name</label>
+                  <input id="bussinessname" type="text" />
+                </div>
+                <div class="filed">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" />
+                </div>
+                <div class="filed">
+                  <label for="number">Mobile Phone</label>
+                  <input id="number" type="number" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- Scroll buttons -->
+          <div class="buttons flex items-center">
+            <button class="prev">prev</button>
+            <button class="next">next</button>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Scripts -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Main -->
+    <script src="./js/script.js"></script>
   </body>
 </html>
