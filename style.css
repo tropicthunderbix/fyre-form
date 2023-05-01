@@ -1,0 +1,230 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: #dfb10e;
+  --light-yellow: #dfb20e75;
+  --white: #ffffff;
+  --dark-gray: #30302b;
+  --mid-gray: #9c9c9c;
+  --light-gray: #d9d9d9;
+  --stone: #abb7b5;
+  --plchlder: #787876;
+  --vehicale: #454d40;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: #0d4235;
+}
+
+img {
+  max-width: 30rem;
+}
+
+section {
+  padding: 2.5rem 0;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+  margin: auto;
+  max-width: 82rem;
+  padding: 0 1.5rem;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+}
+
+.heading span {
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+.heading h2 {
+  font-weight: 600;
+  font-size: 1.7rem;
+  margin-top: 0.5rem;
+}
+
+/*---------------------------------------------------- 
+Main Area
+----------------------------------------------------*/
+main {
+  background-image: url("./images/main-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+main::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(84, 84, 84, 0.5960784314);
+}
+main .container {
+  position: relative;
+  height: inherit;
+}
+main .wrapper {
+  height: inherit;
+}
+main .wrapper h1,
+main .wrapper h2 {
+  font-size: 5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+main .wrapper h1 {
+  color: var(--yellow);
+}
+main .wrapper h2 {
+  color: var(--white);
+}
+
+.quote {
+  color: var(--dark-gray);
+}
+.quote h3,
+.quote h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.quote h2 {
+  font-size: 3.5rem;
+  color: var(--dark-gray);
+}
+.quote h3 {
+  color: var(--yellow);
+  font-size: 1.8rem;
+}
+.quote .switch-state {
+  margin-top: 3rem;
+  position: relative;
+}
+.quote .switch-state::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0.5rem 0;
+  background: rgb(84, 84, 84);
+  background: linear-gradient(90deg, rgb(84, 84, 84) 0%, rgb(223, 177, 14) 100%);
+}
+.quote .switch-state .items {
+  position: relative;
+  gap: 3rem;
+}
+.quote .switch-state .items .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 99999999px;
+  filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.15));
+  border: 5px solid var(--light-gray);
+}
+.quote .switch-state .items .item img {
+  width: 3rem;
+  height: 3rem;
+}
+.quote .form-data {
+  margin-top: 4rem;
+}
+.quote .form-data .form-1 {
+  gap: 2rem;
+}
+.quote .form-data label {
+  color: var(--dark-gray);
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.quote .form-data .filed {
+  display: grid;
+  gap: 0.5rem;
+  width: 80%;
+}
+.quote .form-data input {
+  background-color: var(--stone);
+  border: 0;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  border: 3px solid transparent;
+  transition: 0.5s;
+  outline: none;
+  color: var(--dark-gray);
+  padding-left: 1rem;
+}
+.quote .form-data ::-moz-placeholder {
+  color: var(--plchlder);
+}
+.quote .form-data ::placeholder {
+  color: var(--plchlder);
+}
+.quote .form-data input[type=text]:focus {
+  border: 3px solid var(--light-yellow);
+}
+.quote .form-data .vehicle-btn {
+  background-color: var(--yellow);
+  font-size: 1.4rem;
+}
+.quote .form-data .vehicle-btn h4 {
+  color: var(--dark-gray);
+  padding: 0.6rem 1rem;
+}
+.quote .form-data .vehicle-btn .plus {
+  padding: 0.6rem 1rem;
+  background-color: var(--stone);
+  font-size: 1rem;
+}
+.quote .form-data .vehicle-btn .plus svg {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--yellow);
+  border-radius: 999999px;
+  color: var(--white);
+}/*# sourceMappingURL=style.css.map */

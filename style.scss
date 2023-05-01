@@ -1,0 +1,244 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: #dfb10e;
+  --light-yellow: #dfb20e75;
+  --white: #ffffff;
+  --dark-gray: #30302b;
+  --mid-gray: #9c9c9c;
+  --light-gray: #d9d9d9;
+  --stone: #abb7b5;
+  --plchlder: #787876;
+  --vehicale: #454d40;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: #0d4235;
+}
+
+img {
+  max-width: 30rem;
+}
+
+section {
+  padding: 2.5rem 0;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+  margin: auto;
+  max-width: 82rem;
+  padding: 0 1.5rem;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+}
+
+.heading {
+  span {
+    font-weight: 200;
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/*---------------------------------------------------- 
+Main Area
+----------------------------------------------------*/
+main {
+  background-image: url("./images/main-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #54545498;
+  }
+
+  .container {
+    position: relative;
+    height: inherit;
+  }
+  .wrapper {
+    height: inherit;
+
+    h1,
+    h2 {
+      font-size: 5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    h1 {
+      color: var(--yellow);
+    }
+    h2 {
+      color: var(--white);
+    }
+  }
+}
+
+.quote {
+  color: var(--dark-gray);
+  h3,
+  h2 {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 3.5rem;
+    color: var(--dark-gray);
+  }
+  h3 {
+    color: var(--yellow);
+    font-size: 1.8rem;
+  }
+
+  .switch-state {
+    margin-top: 3rem;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: 0.5rem 0;
+      background: rgb(84, 84, 84);
+      background: linear-gradient(
+        90deg,
+        rgba(84, 84, 84, 1) 0%,
+        rgba(223, 177, 14, 1) 100%
+      );
+    }
+
+    .items {
+      position: relative;
+      gap: 3rem;
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--white);
+        width: 5rem;
+        height: 5rem;
+        border-radius: 99999999px;
+        filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+        border: 5px solid var(--light-gray);
+        img {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    }
+  }
+
+  .form-data {
+    margin-top: 4rem;
+    .form-1 {
+      gap: 2rem;
+    }
+    label {
+      color: var(--dark-gray);
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .filed {
+      display: grid;
+      gap: 0.5rem;
+      width: 80%;
+    }
+
+    input {
+      background-color: var(--stone);
+      border: 0;
+      font-size: 1.3rem;
+      border-radius: 1rem;
+      padding: 0.5rem;
+      border: 3px solid transparent;
+      transition: 0.5s;
+      outline: none;
+      color: var(--dark-gray);
+      padding-left: 1rem;
+    }
+
+    ::placeholder {
+      color: var(--plchlder);
+    }
+    input[type="text"]:focus {
+      border: 3px solid var(--light-yellow);
+    }
+
+    .vehicle-btn {
+      background-color: var(--yellow);
+      font-size: 1.4rem;
+      h4 {
+        color: var(--dark-gray);
+        padding: 0.6rem 1rem;
+      }
+      .plus {
+        padding: 0.6rem 1rem;
+        background-color: var(--stone);
+        font-size: 1rem;
+
+        svg {
+          width: 2rem;
+          height: 2rem;
+          background-color: var(--yellow);
+          border-radius: 999999px;
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
