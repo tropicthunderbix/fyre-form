@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "GlacialIndifference";
+  src: url("./fonts/GlacialIndifference-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "GlacialIndifference bold";
+  src: url("./fonts/GlacialIndifference-bold.otf") format("opentype");
+}
 *,
 ::before,
 ::after {
@@ -16,6 +24,12 @@
   --stone: #abb7b5;
   --plchlder: #787876;
   --vehicale: #454d40;
+  --dot: #e0d7d1;
+  --green-dot: #9bcb76;
+  --red-dot: #e80000;
+  --blue-dot: #29bed0;
+  --icon-bg: #f2f2f2;
+  --icon-border: #cbcbcb;
 }
 
 body {
@@ -91,7 +105,7 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 70vh;
   position: relative;
 }
 main::before {
@@ -112,9 +126,10 @@ main .wrapper {
 }
 main .wrapper h1,
 main .wrapper h2 {
-  font-size: 5rem;
+  font-size: 2.5rem;
   font-weight: 600;
   text-transform: uppercase;
+  text-align: start;
 }
 main .wrapper h1 {
   color: var(--yellow);
@@ -132,12 +147,13 @@ main .wrapper h2 {
   text-transform: uppercase;
 }
 .quote h2 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: var(--dark-gray);
 }
 .quote h3 {
+  margin-top: 0.5rem;
   color: var(--yellow);
-  font-size: 1.8rem;
+  font-size: 1.2rem;
 }
 .quote .switch-state {
   margin-top: 3rem;
@@ -150,32 +166,81 @@ main .wrapper h2 {
   right: 0;
   top: 0;
   bottom: 0;
-  margin: 0.5rem 0;
+  height: 2.5rem;
+  margin-top: 0.5rem;
   background: rgb(84, 84, 84);
   background: linear-gradient(90deg, rgb(84, 84, 84) 0%, rgb(223, 177, 14) 100%);
 }
 .quote .switch-state .items {
   position: relative;
-  gap: 3rem;
+  gap: 1rem;
+}
+.quote .switch-state .items .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 }
 .quote .switch-state .items .item {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--light-gray);
-  width: 5rem;
-  height: 5rem;
-  border-radius: 99999999px;
-  filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.15));
-  border: 5px solid var(--white);
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
   transition: 0.5s;
+  background: rgb(242, 242, 242);
+  background: linear-gradient(151deg, rgb(242, 242, 242) 0%, rgb(214, 214, 214) 100%);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 99999999px;
 }
-.quote .switch-state .items .item img {
+.quote .switch-state .items .item .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(151deg, rgb(235, 235, 235) 0%, rgb(238, 238, 238) 100%);
   width: 3rem;
   height: 3rem;
+  border-radius: 99999999px;
 }
-.quote .switch-state .items .active {
-  background-color: var(--yellow);
+.quote .switch-state .items .item img {
+  width: 2.5rem;
+  height: 2rem;
+}
+.quote .switch-state .items .dots {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.quote .switch-state .items .dots .dot {
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 999999px;
+  background-color: var(--dot);
+}
+.quote .switch-state .items .dots .dot.active-dot {
+  background-color: var(--white);
+  height: 1.2rem;
+  width: 1.2rem;
+}
+.quote .switch-state .items .dots .dot.active-dot.green {
+  border: 5px solid var(--green-dot);
+}
+.quote .switch-state .items .dots .dot.active-dot.red {
+  border: 5px solid var(--red-dot);
+}
+.quote .switch-state .items .dots .dot.active-dot.blue {
+  border: 5px solid var(--blue-dot);
+}
+.quote .switch-state .items .item.active {
+  background: rgb(198, 198, 198);
+  background: linear-gradient(-150deg, rgb(224, 224, 224) 0%, rgb(207, 207, 207) 100%);
+}
+.quote .switch-state .items .img.active {
+  background: rgb(198, 198, 198);
+  background: linear-gradient(150deg, rgb(204, 204, 204) 0%, rgb(185, 185, 185) 100%);
 }
 .quote .form-data {
   margin-top: 4rem;
@@ -192,11 +257,12 @@ main .wrapper h2 {
   font-weight: 700;
   font-size: 1.5rem;
   text-align: center;
+  font-family: "GlacialIndifference bold";
 }
 .quote .form-data .filed {
   display: grid;
   gap: 0.5rem;
-  width: 80%;
+  width: 90%;
 }
 .quote .form-data input,
 .quote .form-data textarea {
@@ -213,9 +279,11 @@ main .wrapper h2 {
 }
 .quote .form-data ::-moz-placeholder {
   color: var(--plchlder);
+  font-family: "GlacialIndifference";
 }
 .quote .form-data ::placeholder {
   color: var(--plchlder);
+  font-family: "GlacialIndifference";
 }
 .quote .form-data input[type=text]:focus {
   border: 3px solid var(--light-yellow);
@@ -226,8 +294,10 @@ main .wrapper h2 {
   margin: 0;
 }
 .quote .form-data .vehicle-btn {
+  cursor: pointer;
   background-color: var(--yellow);
   font-size: 1.4rem;
+  font-family: "GlacialIndifference bold";
 }
 .quote .form-data .vehicle-btn h4 {
   color: var(--dark-gray);
@@ -265,4 +335,120 @@ main .wrapper h2 {
   color: var(--dark-gray);
   border-radius: 10px;
   font-weight: 600;
+}
+.quote p {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 400px) {
+  main {
+    height: 80vh;
+  }
+  main .wrapper h1,
+  main .wrapper h2 {
+    font-size: 3rem;
+  }
+  .quote h2 {
+    font-size: 2.8rem;
+  }
+  .quote h3 {
+    font-size: 1.4rem;
+  }
+  .quote .switch-state::before {
+    height: 4.2rem;
+    margin-top: 0.6rem;
+  }
+  .quote .switch-state .items .item {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+  .quote .switch-state .items .item .img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .quote .switch-state .items .item img {
+    width: 2.5rem;
+    height: 2rem;
+  }
+  .quote p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 640px) {
+  main {
+    height: 90vh;
+  }
+  main .wrapper h1,
+  main .wrapper h2 {
+    font-size: 3.5rem;
+  }
+  .quote h2 {
+    font-size: 3.2rem;
+  }
+  .quote h3 {
+    font-size: 1.6rem;
+  }
+  .quote .form-data .filed {
+    gap: 0.5rem;
+    width: 80%;
+  }
+  .quote .switch-state::before {
+    height: 4.2rem;
+    margin-top: 0.6rem;
+  }
+  .quote .switch-state .item {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+  .quote .switch-state .item .img {
+    width: 6rem;
+    height: 6rem;
+  }
+  .quote .switch-state .item img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .quote p {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 768px) {
+  main {
+    height: 100vh;
+  }
+  main .wrapper h1,
+  main .wrapper h2 {
+    font-size: 5rem;
+  }
+  .quote h2 {
+    font-size: 3.5rem;
+  }
+  .quote h3 {
+    font-size: 1.8rem;
+  }
+  .quote .switch-state::before {
+    height: 4.2rem;
+    margin-top: 0.7rem;
+  }
+  .quote .switch-state .items {
+    gap: 2rem;
+  }
+  .quote .switch-state .item {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+  .quote .switch-state .item .img {
+    width: 6rem;
+    height: 6rem;
+  }
+  .quote .switch-state .item img {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
+.disable {
+  cursor: default !important;
+  opacity: 0.6;
 }/*# sourceMappingURL=style.css.map */

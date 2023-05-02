@@ -189,8 +189,10 @@
     <main>
       <div class="container">
         <div class="wrapper flex flex-col justify-center items-center">
-          <h1>EQUEST A CAR</h1>
-          <h2>SHIPPING QUOTE</h2>
+          <div class="heading">
+            <h1>EQUEST A CAR</h1>
+            <h2>SHIPPING QUOTE</h2>
+          </div>
         </div>
       </div>
     </main>
@@ -207,14 +209,56 @@
 
           <div class="switch-state">
             <div class="items flex justify-center items-center">
-              <div class="item active">
-                <img src="./images/car.png" alt="car" />
+              <div class="content">
+                <div class="item active">
+                  <div class="img active">
+                    <img src="./images/car.png" alt="car" />
+                  </div>
+                </div>
+                <div class="info">
+                  <div class="dots">
+                    <div class="dot active-dot green"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+
+                  <p>Make model and year</p>
+                </div>
               </div>
-              <div class="item">
-                <img src="./images/map.png" alt="map" />
+              <div class="content">
+                <div class="item">
+                  <div class="img">
+                    <img src="./images/map.png" alt="map" />
+                  </div>
+                </div>
+                <div class="info">
+                  <div class="dots">
+                    <div class="dot active-dot red"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+
+                  <p>Cities and Pickup date</p>
+                </div>
               </div>
-              <div class="item">
-                <img src="./images/call.png" alt="call" />
+              <div class="content">
+                <div class="item">
+                  <div class="img">
+                    <img src="./images/call.png" alt="call" />
+                  </div>
+                </div>
+                <div class="info">
+                  <div class="dots">
+                    <div class="dot active-dot blue"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+
+                  <p>Contact Informations</p>
+                </div>
               </div>
             </div>
           </div>
@@ -239,6 +283,14 @@
                     id="make"
                     type="text"
                     placeholder="Eg:- Audi, Honda..."
+                  />
+                </div>
+                <div class="filed">
+                  <label for="year">YEAR</label>
+                  <input
+                    id="year"
+                    type="text"
+                    placeholder="Eg:- 2023"
                   />
                 </div>
                 <div class="filed">
