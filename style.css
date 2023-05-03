@@ -81,6 +81,7 @@ p {
   font-weight: 400;
   font-size: 1.1rem;
   color: var(--dark-gray);
+  word-break: break-all;
 }
 
 .heading span {
@@ -147,7 +148,7 @@ main .wrapper h2 {
   text-transform: uppercase;
 }
 .quote h2 {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   color: var(--dark-gray);
 }
 .quote h3 {
@@ -174,6 +175,8 @@ main .wrapper h2 {
 .quote .switch-state .items {
   position: relative;
   gap: 1rem;
+  align-items: start;
+  justify-content: center;
 }
 .quote .switch-state .items .content {
   display: flex;
@@ -250,12 +253,12 @@ main .wrapper h2 {
 .quote .form-data .form-2,
 .quote .form-data .form-3 {
   gap: 2rem;
-  width: 90%;
+  overflow: hidden;
 }
 .quote .form-data label {
   color: var(--dark-gray);
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
   font-family: "GlacialIndifference bold";
 }
@@ -305,6 +308,9 @@ main .wrapper h2 {
   padding: 0.3rem 0.7rem;
 }
 .quote .form-data .vehicle-btn .plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.3rem 0.7rem;
   background-color: var(--stone);
   font-size: 1rem;
@@ -331,7 +337,7 @@ main .wrapper h2 {
   cursor: pointer;
   background-color: var(--yellow);
   padding: 0.5rem 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   border: none;
   color: var(--dark-gray);
   border-radius: 10px;
@@ -395,6 +401,9 @@ main .wrapper h2 {
     gap: 0.5rem;
     width: 80%;
   }
+  .quote .form-data label {
+    font-size: 1.5rem;
+  }
   .quote .form-data .vehicle-btn {
     font-size: 1.4rem;
   }
@@ -423,6 +432,9 @@ main .wrapper h2 {
   .quote .switch-state .item img {
     width: 3rem;
     height: 3rem;
+  }
+  .quote .buttons button {
+    font-size: 1.5rem;
   }
   .quote p {
     font-size: 1.2rem;
