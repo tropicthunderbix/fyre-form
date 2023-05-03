@@ -102,7 +102,7 @@ p {
 Main Area
 ----------------------------------------------------*/
 main {
-  background-image: url("./images/main-bg.png");
+  background-image: url("./images/main-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -271,7 +271,7 @@ main .wrapper h2 {
 .quote .form-data textarea {
   background-color: var(--stone);
   border: 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
   border-radius: 1rem;
   padding: 0.5rem;
   border: 3px solid transparent;
@@ -305,13 +305,13 @@ main .wrapper h2 {
 }
 .quote .form-data .vehicle-btn h4 {
   color: var(--dark-gray);
-  padding: 0.3rem 0.7rem;
+  padding: 0.5rem 0.7rem;
 }
 .quote .form-data .vehicle-btn .plus {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.3rem 0.7rem;
+  padding: 0.5rem 0.7rem;
   background-color: var(--stone);
   font-size: 1rem;
 }
@@ -400,6 +400,10 @@ main .wrapper h2 {
   .quote .form-data .filed {
     gap: 0.5rem;
     width: 80%;
+  }
+  .quote .form-data input,
+  .quote .form-data textarea {
+    font-size: 1.3rem;
   }
   .quote .form-data label {
     font-size: 1.5rem;
