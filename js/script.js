@@ -16,6 +16,7 @@ const swiper = new Swiper(".formslider", {
 });
 
 swiper.on("slideChange", function () {
+  console.log('nice')
   imgStates.forEach((state) => state.classList.remove("active"));
   states.forEach((state) => state.classList.remove("active"));
   

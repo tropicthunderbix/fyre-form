@@ -178,7 +178,7 @@ main .wrapper h2 {
 .quote .switch-state .items .content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 1.5rem;
 }
@@ -250,7 +250,7 @@ main .wrapper h2 {
 .quote .form-data .form-2,
 .quote .form-data .form-3 {
   gap: 2rem;
-  width: 100%;
+  width: 90%;
 }
 .quote .form-data label {
   color: var(--dark-gray);
@@ -276,6 +276,7 @@ main .wrapper h2 {
   outline: none;
   color: var(--dark-gray);
   padding-left: 1rem;
+  width: 100%;
 }
 .quote .form-data ::-moz-placeholder {
   color: var(--plchlder);
@@ -296,21 +297,21 @@ main .wrapper h2 {
 .quote .form-data .vehicle-btn {
   cursor: pointer;
   background-color: var(--yellow);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: "GlacialIndifference bold";
 }
 .quote .form-data .vehicle-btn h4 {
   color: var(--dark-gray);
-  padding: 0.6rem 1rem;
+  padding: 0.3rem 0.7rem;
 }
 .quote .form-data .vehicle-btn .plus {
-  padding: 0.6rem 1rem;
+  padding: 0.3rem 0.7rem;
   background-color: var(--stone);
   font-size: 1rem;
 }
 .quote .form-data .vehicle-btn .plus svg {
-  width: 2rem;
-  height: 2rem;
+  width: 1.6rem;
+  height: 1.6rem;
   background-color: var(--yellow);
   border-radius: 999999px;
   color: var(--white);
@@ -393,6 +394,19 @@ main .wrapper h2 {
   .quote .form-data .filed {
     gap: 0.5rem;
     width: 80%;
+  }
+  .quote .form-data .vehicle-btn {
+    font-size: 1.4rem;
+  }
+  .quote .form-data .vehicle-btn h4 {
+    padding: 0.6rem 1rem;
+  }
+  .quote .form-data .vehicle-btn .plus {
+    padding: 0.6rem 1rem;
+  }
+  .quote .form-data .vehicle-btn .plus svg {
+    width: 2rem;
+    height: 2rem;
   }
   .quote .switch-state::before {
     height: 4.2rem;
